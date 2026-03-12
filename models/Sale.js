@@ -2,9 +2,8 @@ import mongoose from 'mongoose';
 
 const saleSchema = mongoose.Schema({
     items: [{
-        product: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Product',
+        idProduct: {
+            type: String,
             required: true,
         },
         quantity: {
@@ -20,7 +19,7 @@ const saleSchema = mongoose.Schema({
             required: true
         }
     }],
-    totalAmount: {
+    total: {
         type: Number,
         required: true,
     },
