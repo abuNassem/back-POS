@@ -43,6 +43,14 @@ const productSchema = mongoose.Schema({
         type: String,
         required: false,
     },
+    isActive:{
+        type:Boolean,
+        required: true,
+        default:true},
+        isSync:{
+        type:Boolean,
+        required: true,
+        default:false}
 }, {
     timestamps: true,
 });
