@@ -70,7 +70,6 @@ const getProducts = asyncHandler(async (req, res) => {
 
 const createProduct = asyncHandler(async (req, res) => {
     const { name, barcode, price, costPrice, stock, category, image } = req.body;
-console.log(req.user)
     if (isEmpty(name) || isEmpty(category)) return sendError(res, "EMPTY_FIELDS", "الاسم والتصنيف مطلوبان");
 
     const vPrice = validateNumber(price);
@@ -344,8 +343,6 @@ export const getSyncProduct=asyncHandler(async(req,res)=>{
 
 
 const getProductById = asyncHandler(async (req, res) => {
-    console.log(req.params.id)
-    console.log(await Product.find())
     const product = await Product.findById(req.params.id);
 
     if (!product) {
