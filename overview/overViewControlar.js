@@ -5,6 +5,7 @@ import Sale from "../sales/SaleModel.js"
 
 export const getPublicInfo=async(req,res)=>{
 try{
+    console.log(public)
 const allProducts = await Product.find();
 const allSales = await Sale.find();
 
@@ -56,7 +57,7 @@ export const getTopSellingProducts = async (req, res) => {
     try {
         // ترتيب المنتجات حسب حقل المبيعات تنازلياً وجلب أول 5
         const topProducts = await Product.find()
-            .sort({ totalSales: -1 }) // افترضت أن الحقل اسمه salesCount
+            .sort({ totalSales: -1 })
             .limit(5)
             .select('name totalSales'); // جلب الحقول المهمة فقط
 
