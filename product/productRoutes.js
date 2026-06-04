@@ -22,7 +22,7 @@ router.get('/:id', getProductById);
 router.post('/', createProduct);
 router.put('/:id', updateProduct);
 router.delete('/:id', deleteProduct);
-router.get('/populated', getPopulated);
+router.get('/populated/get', getPopulated);
 router.post('/import',bulkImportProducts);
 router.post('/deleteMany',deleteManyProducts);
 router.put('/sync/saveLocal',syncProductsStatus);
