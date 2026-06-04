@@ -5,7 +5,6 @@ import Sale from "../sales/SaleModel.js"
 
 export const getPublicInfo=async(req,res)=>{
 try{
-    console.log(public)
 const allProducts = await Product.find();
 const allSales = await Sale.find();
 
