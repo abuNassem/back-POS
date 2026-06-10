@@ -12,7 +12,6 @@ import {
     getSyncProduct,
     getProductById,
 } from './productController.js';
-import { checkAuth } from '../utils/checkAuth.js';
 
 const router = express.Router();
 
